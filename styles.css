@@ -651,3 +651,15 @@ h1, h2, h3 {
     margin-top: 2rem;
   }
 }
+
+/* On very small screens stack testimonials vertically instead of using a horizontal slider.
+   This prevents the horizontal scrollbar (floating bar) from obscuring content. */
+@media (max-width: 600px) {
+  .testimonials__slider {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  .testimonial {
+    flex: 1 1 100%;
+  }
+}
