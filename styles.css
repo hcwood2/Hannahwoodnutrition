@@ -575,6 +575,16 @@ h1, h2, h3 {
   overflow-x: auto;
   padding: 2rem 0 1rem;
   scroll-snap-type: x mandatory;
+
+  /* Hide scrollbars on mobile to prevent the horizontal bar overlaying text.  
+     This keeps the testimonial carousel functional but unobtrusive on small screens. */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+/* Hide the webkit scrollbar for the testimonials slider */
+.testimonials__slider::-webkit-scrollbar {
+  display: none;
 }
 
 .testimonial {
