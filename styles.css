@@ -39,26 +39,25 @@ html {
 body {
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.6;
-  color: var(--text-dark);
-  background-color: var(--background-light);
+  color: var(--dark);
+  background-color: var(--background);
 }
 
 /* Colour variables derived from the user's palette */
 :root {
-  --primary: #42c6cc; /* turquoise */
-  --secondary: #ff7062; /* coral */
-  --accent: #fc4f00; /* orange */
-  --highlight: #61dfe5; /* electric blue */
-  --light-blue: #d4edf4; /* pale blue */
-  --dark: #2a2e30; /* dark grey */
-  --background-light: #f7fafa; /* very light background */
+  --primary: #bfa5c4;   /* soft lavender (brand identity) */
+  --secondary: #8d7485; /* muted mauve (depth) */
+  --accent: #f278b5;    /* highlight only (sparingly used) */
+  --dark: #2c2c2c;      /* primary text */
+  --text: #6e6e6e;      /* secondary text */
+  --background: #e6e6e6; /* main background */
   --white: #ffffff;
 }
 
 /* Utility classes */
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -201,11 +200,10 @@ h1, h2, h3 {
 }
 
 .hero__subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
   color: var(--dark);
-  /* Center the subtitle text on the hero section */
-  text-align: center;
+  opacity: 0.8;
 }
 
 /* Buttons */
@@ -220,12 +218,15 @@ h1, h2, h3 {
 
 .btn--primary {
   background-color: var(--primary);
-  color: var(--white);
+  color: var(--dark);
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  transition: all 0.3s ease;
 }
 
-.btn--primary:hover,
-.btn--primary:focus {
-  background-color: var(--highlight);
+.btn--primary:hover {
+  background-color: var(--secondary);
+  color: var(--white);
 }
 
 .btn--secondary {
@@ -285,10 +286,10 @@ h1, h2, h3 {
 
 .service {
   background-color: var(--white);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(141, 116, 133, 0.15);
   transition: transform 0.2s ease;
 }
 
